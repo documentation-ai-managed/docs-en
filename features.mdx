@@ -1,0 +1,126 @@
+---
+title: Core Features
+description: Explore the essential features of En that help you organize, collaborate on, and maintain project documentation effectively.
+---
+
+## Overview
+
+En provides powerful tools to streamline your documentation workflow. You organize content into intuitive hierarchies, collaborate seamlessly with your team, discover information quickly through advanced search, and track changes with built-in version control. These features ensure your docs stay current and accessible.
+
+<Columns cols={2}>
+  <Card title="Organize Hierarchies" icon="layers" href="#document-organization">
+    Build nested structures for complex projects.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#collaboration-tools">
+    Edit, comment, and review in real-time.
+  </Card>
+  <Card title="Smart Search" icon="search" href="#search-discovery">
+    Find content instantly across your docs.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="#version-control">
+    Revert changes and track edits effortlessly.
+  </Card>
+</Columns>
+
+## Document Organization and Hierarchies
+
+Create structured documentation spaces with folders, pages, and subpages. You nest content to reflect your project's architecture, making navigation intuitive.
+
+<Steps>
+  <Step title="Create a Space" icon="folder">
+    Start a new documentation space for your project.
+
+    ```
+    New Space: "My Project Docs"
+    Description: Central hub for API references and guides.
+    ```
+  </Step>
+  <Step title="Add Pages" icon="file-text">
+    Build hierarchies by nesting pages.
+  </Step>
+  <Step title="Reorder Content" icon="move">
+    Drag and drop to adjust the structure.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use frontmatter in MDX files to set custom metadata like `sidebar_position` for automatic ordering.
+</Callout>
+
+## Collaboration Tools for Teams
+
+Invite team members to co-edit docs with real-time updates, comments, and permissions.
+
+<Tabs>
+  <Tab title="Real-time Editing" icon="edit-3">
+    Multiple users edit simultaneously. Changes appear instantly, with cursors showing who edits where.
+
+    <Image
+      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+      alt="Team collaborating on documentation in real-time"
+      width="800"
+      height="400"
+    />
+  </Tab>
+  <Tab title="Comments & Reviews" icon="message-circle">
+    Add inline comments and @mentions for feedback.
+
+    ```
+    @team Review this section for accuracy.
+    ```
+  </Tab>
+  <Tab title="Permissions" icon="shield">
+    Set roles: Admin, Editor, Viewer.
+  </Tab>
+</Tabs>
+
+## Search and Content Discovery
+
+En's search indexes all your docs, supporting full-text queries, filters, and highlights.
+
+<Expandable title="Advanced Search Filters" default-open="true">
+  Filter by tags, spaces, or date. For example, search `API {endpoint}` to find all API-related pages.
+</Expandable>
+
+| Feature | Description | Example Query |
+|---------|-------------|---------------|
+| Full-text | Matches across titles and body | `authentication flow` |
+| Filters | Narrow by space or tag | `tag:api space:project` |
+| Highlights | Shows context snippets | `<100ms response` |
+
+## Version Control for Docs
+
+Track every change with Git-like version history. You compare diffs, revert commits, and branch for experiments.
+
+<CodeGroup tabs="CLI,UI">
+  ```bash
+  # Pull latest changes
+  en pull
+
+  # Create a new version branch
+  en branch new-feature-docs
+
+  # Commit changes
+  en commit -m "Add authentication guide"
+  ```
+  ```javascript
+  // Programmatic API example
+  const en = require('en-docs-sdk');
+
+  await en.checkout('main');
+  await en.commit('Update features', { files: ['features.mdx'] });
+  ```
+</CodeGroup>
+
+<Callout kind="info">
+  Integrate with GitHub for seamless repo syncing. Connect your repo at `https://dashboard.example.com/integrations`.
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started in 5 minutes.
+  </Card>
+  <Card title="Authentication" icon="key" href="/authentication">
+    Secure your docs.
+  </Card>
+</Columns>

@@ -1,0 +1,115 @@
+---
+title: Quickstart Guide
+description: Set up your En account and create your first documentation space in under 5 minutes to start organizing your projects.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+Before starting, ensure you have:
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: GitHub account for version control integration
+</Callout>
+
+## Create Your En Account
+
+Follow these steps to sign up and verify your account.
+
+<Steps>
+  <Step title="Visit En Dashboard" icon="monitor">
+    Navigate to the [En dashboard](https://app.en.com) and click **Sign Up**.
+  </Step>
+  <Step title="Enter Details" icon="user">
+    Provide your email, create a strong password, and complete the CAPTCHA.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link from `no-reply@en.com` and click it to activate your account.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Answer the quick setup questions about your project type to personalize your workspace.
+  </Step>
+</Steps>
+
+## Set Up Your Default Documentation Space
+
+Once logged in, create your first space to organize project docs.
+
+<Steps>
+  <Step title="Create New Space" icon="folder-plus">
+    Click **New Space** in the sidebar and name it `My Project Docs`.
+  </Step>
+  <Step title="Configure Space Settings" icon="settings">
+    Set visibility to **Private** or **Public**, add a description like "Documentation for my En project", and choose the default template.
+  </Step>
+  <Step title="Invite Collaborators" icon="users">
+    Optionally, share the space invite link with team members via email.
+  </Step>
+</Steps>
+
+## Add and Edit Your First Document
+
+Create a document and add content using MDX.
+
+<Steps>
+  <Step title="New Document" icon="file-plus">
+    In your space, click **New Document** and title it "Introduction".
+  </Step>
+  <Step title="Edit in MDX" icon="edit-3">
+    Switch to the MDX editor and add frontmatter and content.
+  </Step>
+  <Step title="Preview and Publish" icon="eye">
+    Preview changes in real-time, then click **Publish** to make it live.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="MDX Example">
+  ```mdx
+  ---
+  title: Introduction
+  description: Welcome to the project.
+  ---
+
+  ## Overview
+
+  This is your first En document.
+  ```
+</CodeGroup>
+
+## Interface Tour
+
+Explore key areas of the En interface.
+
+<ExpandableGroup>
+  <Expandable title="Sidebar Navigation" default-open="true">
+    The left sidebar shows your spaces, documents, and search. Use it to switch contexts quickly.
+
+    - **Spaces**: List of documentation spaces
+    - **Recent Docs**: Quick access to edited files
+    - **Search**: Global search across all content
+  </Expandable>
+  <Expandable title="Editor Toolbar">
+    Top toolbar includes preview toggle, publish button, and version history.
+  </Expandable>
+  <Expandable title="Preview Pane">
+    Real-time rendering of MDX with components like `<Callout>` and code blocks.
+  </Expandable>
+</ExpandableGroup>
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Customize Themes" icon="palette" href="/introduction">
+    Learn to apply brand colors like `#3B82F6`.
+  </Card>
+  <Card title="Advanced Editing" icon="code" href="/authentication">
+    Integrate authentication for private docs.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/changelog">
+    Set up Git sync for your spaces.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Ready to build? Dive into [custom components](/introduction) next or explore the full interface tour in your dashboard.
+</Callout>
